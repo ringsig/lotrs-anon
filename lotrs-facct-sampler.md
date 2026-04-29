@@ -15,6 +15,11 @@ here is narrower:
 - deterministic XOF-driven behavior suitable for Python/Rust interop
 - practical implementation for `sigma` in the `10^7` range
 
+This sampler is deterministic and integer-only, but it is **not** a
+constant-time sampler. Proposal rejection, Bernoulli accept/reject
+tests, and total loop counts are data-dependent. The artifact does not
+claim a constant-time signing implementation.
+
 This sampler is **not** used for the small binary-proof widths
 `sigma_a`, `sigma_b`; those remain on the exact CDT path.
 
@@ -97,9 +102,13 @@ Constants:
 - `LN2_Q = round(ln(2) * 2^U_BITS)`
 - `PROB_SCALE = 2^PROB_BITS`
 
+At sampler-preparation time the implementations store
+
+- `sigma_sq_int = round(sigma^2)`
+
 For a candidate `x`, the exponent is quantized as
 
-- `u_q = floor((x^2 * 2^U_BITS) / (2 sigma^2))`
+- `u_q = floor((x^2 * 2^U_BITS) / (2 * sigma_sq_int))`
 
 Then
 
@@ -162,18 +171,23 @@ support.
 
 The repo uses two Gaussian backends:
 
-- small `sigma`: exact CDT sampler
-- large `sigma`: this FACCT-style sampler
+- exact CDT sampler
+- this FACCT-style sampler
 
-The current threshold is based on CDT size:
+Backend selection for the masking widths is explicit in the parameter
+set, not a hot-path runtime threshold. `LoTRSParams.mask_sampler`
+selects CDT or FACCT for `sigma_0` and `sigma_0_prime`; `sigma_a` and
+`sigma_b` always use shipped CDT tables.
 
-- use FACCT-style when `ceil(14 * sigma) + 1 > 1_000_000`
+The current supported parameter sets declare:
 
-So in practice:
+- `TEST_PARAMS`: mask sampler is CDT
+- `BENCH_4OF32`, `BENCH_PARAMS`, `PRODUCTION_PARAMS`: mask sampler is
+  FACCT-style
 
-- `sigma_a`, `sigma_b` use CDT
-- `sigma_0`, `sigma_0_prime` use FACCT-style sampling for BENCH and
-  PRODUCTION
+The `ceil(14 * sigma) + 1 > 1_000_000` rule is only a consistency /
+feasibility guard: a parameter set that declares CDT for a mask width
+whose table would exceed one million entries is rejected.
 
 ## 10. Validation Requirements
 

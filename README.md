@@ -137,6 +137,12 @@ Fiat-Shamir hash, instead of re-hashing the multi-MiB ring
 public-key table at every call site.  Binding to the full PK is
 preserved by SHAKE-256 collision-resistance.
 
+The artifact does **not** claim a constant-time signing
+implementation.  The Rust arithmetic hot paths have received a first
+hardening pass, but Gaussian/FACCT/rejection sampling and signing
+restart logic remain data-dependent; see `lotrs-rs/README.md` for the
+current side-channel status.
+
 ### `estimator/`
 
 SageMath scripts that reproduce the concrete parameter selection,
@@ -153,8 +159,9 @@ the large masking distributions (`sigma_0`, `sigma_0_prime`) in the
 benchmark and production parameter sets.  Covers the truncated
 target distribution, the SHAKE-256/XOF-driven randomness, the
 uniform proposal, the fixed-point Bernoulli-exp acceptance test,
-the dispatch rule used by the implementations, and the validation
-requirements that the Python/Rust cross-language KAT enforces.
+the explicit parameter-set sampler selection used by the
+implementations, and the validation requirements that the Python/Rust
+cross-language KAT enforces.
 
 ## Artifact scope
 
