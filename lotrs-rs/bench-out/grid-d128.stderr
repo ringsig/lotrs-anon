@@ -1,0 +1,54 @@
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.45
+   Compiling unicode-ident v1.0.24
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.0
+   Compiling serde_core v1.0.228
+   Compiling zmij v1.0.21
+   Compiling serde v1.0.228
+   Compiling keccak v0.1.6
+   Compiling serde_json v1.0.149
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.0
+   Compiling subtle v2.6.1
+   Compiling hex v0.4.3
+   Compiling generic-array v0.14.7
+   Compiling syn v2.0.117
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling digest v0.10.7
+   Compiling sha3 v0.10.9
+   Compiling zeroize_derive v1.4.3
+   Compiling serde_derive v1.0.228
+   Compiling zeroize v1.8.2
+   Compiling lotrs v0.1.0 (lotrs-rs)
+    Finished `release` profile [optimized] target(s) in 5.75s
+     Running `target/release/examples/bench --grid '32,1:4:8:16:32;100,1:5:10:25:50;1,2:4:8:16'`
+running N=32,T=1 (1-of-32)…
+  sign 318.6 ms (DualMS 213.5 ms + RS 93.47 ms), verify 31.39 ms (DualMS 19.35 ms + RS 10.93 ms), sig 21.46 KiB
+running N=32,T=4 (4-of-32)…
+  sign 1375.0 ms (DualMS 1195.4 ms + RS 164.9 ms), verify 59.84 ms (DualMS 45.10 ms + RS 10.88 ms), sig 22.53 KiB
+running N=32,T=8 (8-of-32)…
+  sign 4286.3 ms (DualMS 3956.1 ms + RS 313.2 ms), verify 99.64 ms (DualMS 81.16 ms + RS 10.90 ms), sig 22.99 KiB
+running N=32,T=16 (16-of-32)…
+  sign 6008.2 ms (DualMS 5671.3 ms + RS 314.2 ms), verify 177.4 ms (DualMS 151.9 ms + RS 10.82 ms), sig 23.62 KiB
+running N=32,T=32 (32-of-32)…
+  sign 6052.2 ms (DualMS 5658.2 ms + RS 359.4 ms), verify 334.5 ms (DualMS 294.2 ms + RS 10.90 ms), sig 24.07 KiB
+running N=100,T=1 (1-of-100)…
+  sign 1385.5 ms (DualMS 982.4 ms + RS 374.7 ms), verify 90.48 ms (DualMS 57.77 ms + RS 29.46 ms), sig 32.57 KiB
+running N=100,T=5 (5-of-100)…
+  sign 4600.2 ms (DualMS 4140.9 ms + RS 422.1 ms), verify 208.2 ms (DualMS 164.7 ms + RS 28.55 ms), sig 33.74 KiB
+running N=100,T=10 (10-of-100)…
+  sign 12.40 s (DualMS 11.63 s + RS 722.2 ms), verify 364.3 ms (DualMS 306.6 ms + RS 28.70 ms), sig 34.36 KiB
+running N=100,T=25 (25-of-100)…
+  sign 29.24 s (DualMS 27.99 s + RS 1166.7 ms), verify 827.5 ms (DualMS 725.2 ms + RS 29.35 ms), sig 35.09 KiB
+running N=100,T=50 (50-of-100)…
+  sign 50.39 s (DualMS 48.41 s + RS 1828.9 ms), verify 1609.1 ms (DualMS 1436.0 ms + RS 29.08 ms), sig 35.53 KiB
+running N=1,T=2 (2-of-1)…
+  sign 160.5 ms (DualMS 114.5 ms + RS 41.95 ms), verify 5.77 ms (DualMS 2.77 ms + RS 2.81 ms), sig 16.84 KiB
+running N=1,T=4 (4-of-1)…
+  sign 364.5 ms (DualMS 295.8 ms + RS 64.39 ms), verify 6.37 ms (DualMS 3.33 ms + RS 2.81 ms), sig 17.47 KiB
+running N=1,T=8 (8-of-1)…
+  sign 889.6 ms (DualMS 786.2 ms + RS 99.15 ms), verify 7.65 ms (DualMS 4.46 ms + RS 2.83 ms), sig 17.91 KiB
+running N=1,T=16 (16-of-1)…
+  sign 1395.1 ms (DualMS 1273.2 ms + RS 117.1 ms), verify 10.15 ms (DualMS 6.72 ms + RS 2.84 ms), sig 18.54 KiB

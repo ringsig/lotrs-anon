@@ -1,0 +1,27 @@
+[package]
+name = "lotrs"
+version = "0.1.0"
+edition = "2021"
+description = "Practical Post-Quantum Threshold Ring Signatures from Lattices (LoTRS)"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "lotrs"
+path = "src/lib.rs"
+
+[dependencies]
+sha3 = "0.10"                                # SHAKE256
+subtle = { version = "2", default-features = false }
+zeroize = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+[profile.bench]
+inherits = "release"

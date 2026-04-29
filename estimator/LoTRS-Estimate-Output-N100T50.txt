@@ -1,0 +1,164 @@
+# Reference output of: python3 lotrs_estimate.py  (run inside a SageMath shell)
+Binary proof MLWE modulus q_hat = 8589934237 logq_hat 32.9999999403771
+nhat = 10 khat = 8
+K_a 20
+
+=== set ASIS bounds HP ===
+B_f1 = 10.6277824733309
+B_f0 = 13.6998168064011
+B_g1 = 28.2557857530919
+B_g0 = 34.3996598710968
+B_zb = 16.2001228585517
+K_a = 20
+
+DualMS modulus q = 274877906837 logq =  37.9999999994384
+l = 5 l_prime = 6 k = 12
+log2(B_det) = 11.9083926207737
+log2(k*B_eta_w) = 11.5849625007212
+
+=== Binary Proof LWE Estimator ===
+LWEParameters(n=1024, q=8589934237, Xs=D(σ=0.82), Xe=D(σ=12547.92), m=+Infinity, tag=None)
+usvp                 :: rop: ≈2^142.2, red: ≈2^142.2, δ: 1.003468, β: 487, d: 1928, tag: usvp
+dual_hybrid          :: rop: ≈2^137.4, red: ≈2^137.2, guess: ≈2^133.9, β: 470, p: 3, ζ: 10, t: 60, β': 470, N: ≈2^97.3, m: 1024
+{'usvp': rop: ≈2^142.2, red: ≈2^142.2, δ: 1.003468, β: 487, d: 1928, tag: usvp, 'dual_hybrid': rop: ≈2^137.4, red: ≈2^137.2, guess: ≈2^133.9, β: 470, p: 3, ζ: 10, t: 60, β': 470, N: ≈2^97.3, m: 1024}
+
+
+=== Binary Proof ASIS Estimator ===
+***** Attack Variant 0  *********
+Attack uses block-size 350 and 2401 dimensions, with 0 q-vectors
+d = 2402
+(d1, d2, d3, d4, d5) = (128, 2274, 0, 0, 0)
+(m1, m2, m3, m4, m5) = (128, 12672, 2304, 128, 12672)
+(dhead1, dhead2, dhead3, dhead4, dhead5) = (0, 0, 0, 0, 0)
+log2(epsilon) = -72.32, log2 nvector per run 72.63
+shortest vector used has length l=6848191715.64, q=8589934237, `l<q'= 1
+SIS: dim=2401 & blocksize=350 & cost_pq=92
+BKZ block size = 350
+RHF = 1.00436
+Cost= 92.84008
+
+***** Attack Variant 1  *********
+Attack uses block-size 350 and 2401 dimensions, with 0 q-vectors
+d = 2402
+(d1, d2, d3, d4, d5) = (128, 2274, 0, 0, 0)
+(m1, m2, m3, m4, m5) = (128, 12672, 2304, 128, 12672)
+(dhead1, dhead2, dhead3, dhead4, dhead5) = (0, 0, 0, 0, 0)
+log2(epsilon) = -72.32, log2 nvector per run 72.63
+shortest vector used has length l=6848191715.65, q=8589934237, `l<q'= 1
+SIS: dim=2401 & blocksize=350 & cost_pq=92
+BKZ block size = 350
+RHF = 1.00436
+Cost= 92.84008
+
+***** Attack Variant 2  *********
+Attack uses block-size 340 and 2396 dimensions, with 0 q-vectors
+d = 2397
+(d1, d2, d3, d4, d5) = (128, 2269, 0, 0, 0)
+(m1, m2, m3, m4, m5) = (128, 12672, 2304, 128, 12672)
+(dhead1, dhead2, dhead3, dhead4, dhead5) = (0, 0, 0, 0, 0)
+log2(epsilon) = -69.16, log2 nvector per run 70.56
+shortest vector used has length l=476202623124.64, q=8589934237, `l<q'= 0
+SIS: dim=2396 & blocksize=340 & cost_pq=90
+BKZ block size = 340
+RHF = 1.00445
+Cost= 90.1875
+
+
+=== DualMS LWE Estimator ===
+LWEParameters(n=640, q=274877906837, Xs=D(σ=0.82), Xe=D(σ=26336660.42), m=+Infinity, tag=None)
+usvp                 :: rop: ≈2^122.3, red: ≈2^122.3, δ: 1.003856, β: 419, d: 1188, tag: usvp
+dual_hybrid          :: rop: ≈2^118.0, red: ≈2^118.0, guess: ≈2^113.5, β: 404, p: 3, ζ: 0, t: 60, β': 404, N: ≈2^83.6, m: 640
+{'usvp': rop: ≈2^122.3, red: ≈2^122.3, δ: 1.003856, β: 419, d: 1188, tag: usvp, 'dual_hybrid': rop: ≈2^118.0, red: ≈2^118.0, guess: ≈2^113.5, β: 404, p: 3, ζ: 0, t: 60, β': 404, N: ≈2^83.6, m: 640}
+
+
+=== DualMS ASIS Estimator ===
+
+=== set DualMS ASIS bounds ===
+log2(sigma_s)       = log(12426559077)/log(2)
+log2(sigma_s_prime) = log(4417464453)/log(2)
+log2(B_alpha) = 6.95419631038687 m_alpha = 1
+log2(B_zhat)  = 34.3964956310161 m_zhat  = 5
+log2(B_rhat)  = 34.5692439140290 m_rhat  = 6
+log2(B_ehat)  = 35.0692439140290 m_ehat  = 12
+log2(B_etahat) = 6.00000000000000 m_etahat = 12
+***** Attack Variant 0  *********
+Attack uses block-size 350 and 2777 dimensions, with 37 q-vectors
+d = 2741
+(d1, d2, d3, d4, d5) = (1499, 768, 474, 0, 0)
+(m1, m2, m3, m4, m5) = (1536, 768, 640, 128, 1536)
+(dhead1, dhead2, dhead3, dhead4, dhead5) = (37, 0, 0, 0, 0)
+log2(epsilon) = -71.45, log2 nvector per run 72.63
+shortest vector used has length l=274794987788.01, q=274877906837, `l<q'= 1
+SIS: dim=2777 & blocksize=350 & cost_pq=92
+BKZ block size = 350
+RHF = 1.00436
+Cost= 92.84008
+
+***** Attack Variant 1  *********
+Attack uses block-size 330 and 2812 dimensions, with 0 q-vectors
+d = 2813
+(d1, d2, d3, d4, d5) = (1536, 768, 509, 0, 0)
+(m1, m2, m3, m4, m5) = (1536, 768, 640, 128, 1536)
+(dhead1, dhead2, dhead3, dhead4, dhead5) = (0, 0, 0, 0, 0)
+log2(epsilon) = -67.47, log2 nvector per run 68.48
+shortest vector used has length l=604580175843.13, q=274877906837, `l<q'= 0
+SIS: dim=2812 & blocksize=330 & cost_pq=87
+BKZ block size = 330
+RHF = 1.00454
+Cost= 87.53493
+
+***** Attack Variant 2  *********
+Attack uses block-size 325 and 2897 dimensions, with 0 q-vectors
+d = 2898
+(d1, d2, d3, d4, d5) = (1536, 768, 594, 0, 0)
+(m1, m2, m3, m4, m5) = (1536, 768, 640, 128, 1536)
+(dhead1, dhead2, dhead3, dhead4, dhead5) = (0, 0, 0, 0, 0)
+log2(epsilon) = -66.96, log2 nvector per run 67.44
+shortest vector used has length l=804748535066.20, q=274877906837, `l<q'= 0
+SIS: dim=2897 & blocksize=325 & cost_pq=86
+BKZ block size = 325
+RHF = 1.00459
+Cost= 86.20864
+
+=== Parts of signature ===
+size_B_bin_1: 4.37499999068392 KB
+
+size_w_0: 0.000000000000000 KB
+
+size_f_1: 15.7272268208543 KB
+
+size_z_b: 4.40474122672742 KB
+
+size_tilde_z: 2.30614366870183 KB
+
+size_tilde_r: 2.77123781620119 KB
+
+size_tilde_e: 5.54247563240238 KB
+
+
+Signature size: 35.1426942961960 KB
+
+Single public key size: 7.12499999989470 KB
+
+Ring PK size: 35624.9999994735 KB
+
+
+Number of repetitions for rejection sampling: 12.3365470226446
+
+
+=== Perform condition checks ===
+8589934237  equiv 5 mod 8
+q_hat: True 
+
+274877906837  equiv 5 mod 8
+q: True 
+
+Challenge diffs invertible mod qhat: True
+Challenge diffs invertible mod q True 
+
+Regularity condition for sigma_s: True
+Regularity condition for sigma_s_prime: True 
+
+log(qhat_min) 30.4135606123469
+log(qhat) 32.9999999403771
+Range proof condition: True
